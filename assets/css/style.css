@@ -281,13 +281,12 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  /**
-       * Remove the inner border and padding in Firefox.
-       */
-  /**
-       * Restore the focus styles unset by the previous rule.
-       */
+  -webkit-appearance: button;
 }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -845,6 +844,18 @@ a {
 
 .skill-item:nth-of-type(9) {
   grid-area: a9;
+}
+
+.about {
+  letter-spacing: 0.055em;
+  background-color: #e5e5e5;
+}
+
+.about__container {
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 @media (min-width: 576px) {
