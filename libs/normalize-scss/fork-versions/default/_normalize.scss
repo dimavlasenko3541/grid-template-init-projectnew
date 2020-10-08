@@ -454,7 +454,7 @@ button,
   /**
    * Remove the inner border and padding in Firefox.
    */
-
+}
   &::-moz-focus-inner {
     border-style: none;
     padding: 0;
@@ -467,7 +467,7 @@ button,
   &:-moz-focusring {
     outline: 1px dotted ButtonText;
   }
-}
+
 
 /**
  * Show the overflow in Edge.
