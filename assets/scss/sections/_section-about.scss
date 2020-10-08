@@ -1,6 +1,7 @@
 .about {
-  letter-spacing: 0.055em;
+  letter-spacing: 0.056em;
   background-color: $color-gray-light;
+  line-height: 145%;
 
   @include lg-min {
     padding-top: 100px;
@@ -15,8 +16,10 @@
     padding-bottom: 60px;
   }
   &__content {
+    position: relative;
        
     p {
+      
       @include lg-min {
         font-size: 1.125rem;
       }
@@ -49,4 +52,16 @@
     align-content: center;
     justify-items: center;
   }
+  &__text{
+    &:first-of-type::after{
+      position: absolute;
+      top: 150px;
+      right: -50px;
+      width: 2px ;
+      height: 200px;
+      content: "";
+      background-color:#637588;
+      opacity: 0.1;
+  }
+}
 }

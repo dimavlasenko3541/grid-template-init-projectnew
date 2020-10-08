@@ -463,7 +463,7 @@ template {
 /* sm */
 /* xs */
 /* xx */
-.header-menu__container, .header-content__container, .about__container {
+.header-menu__container, .header-content__container, .about__container, .form__container {
   max-width: 1340px;
   margin: auto;
   padding-right: 20px;
@@ -856,8 +856,13 @@ a {
 }
 
 .about {
-  letter-spacing: 0.055em;
+  letter-spacing: 0.056em;
   background-color: #e5e5e5;
+  line-height: 145%;
+}
+
+.about__content {
+  position: relative;
 }
 
 .about__container {
@@ -869,6 +874,27 @@ a {
   -ms-flex-line-pack: center;
       align-content: center;
   justify-items: center;
+}
+
+.about__text:first-of-type::after {
+  position: absolute;
+  top: 150px;
+  right: -50px;
+  width: 2px;
+  height: 200px;
+  content: "";
+  background-color: #637588;
+  opacity: 0.1;
+}
+
+.form {
+  padding: 30px 0;
+  background-color: #2d3651;
+}
+
+.form__container {
+  display: grid;
+  grid-gap: 20px;
 }
 
 @media (min-width: 576px) {
