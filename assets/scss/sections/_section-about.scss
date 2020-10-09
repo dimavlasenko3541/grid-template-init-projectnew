@@ -1,8 +1,7 @@
 .about {
-  letter-spacing: 0.056em;
+  letter-spacing: 0.055em;
   background-color: $color-gray-light;
-  line-height: 145%;
-
+  
   @include lg-min {
     padding-top: 100px;
     padding-bottom: 100px;
