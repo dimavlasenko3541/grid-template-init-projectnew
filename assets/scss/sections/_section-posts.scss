@@ -83,13 +83,20 @@
   overflow: hidden;
   height: 100%;
   grid-template-rows: 300px 1fr;
+    
 }
 .post-item__image {
   display: flex;
   overflow: hidden;
+  transition: transform 0.5s;
   align-content: center;
   justify-content: center;
   background-color: $color-primary;
+   &:hover{
+    transform: scale(1.1);
+    } 
+    
+   
 }
 .post-item__caption {
   display: grid;
@@ -100,10 +107,4 @@
   &:hover {
     color: $color-gray-light;
   }
-}
-.post-item__link {
-  display: grid;
-  overflow: hidden;
-  height: 100%;
-  grid-template-rows: 300px 1fr;
 }
