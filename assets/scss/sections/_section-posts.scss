@@ -15,7 +15,7 @@
     color: $color-gray;
     letter-spacing: 0;
   }
-
+  
   h3 {
     letter-spacing: 0.05em;
     color: $color-gray;
@@ -74,37 +74,37 @@
 .post-item {
   transition: background-color 0.5s;
   background-color: #f2f2f2;
-  &:hover {
-    background-color: $color-gray-light;
-  }
+  overflow: hidden;
 }
 .post-item__link {
   display: grid;
   overflow: hidden;
   height: 100%;
   grid-template-rows: 300px 1fr;
-    
+  transition: 0.5s;
+ 
+  &:hover {
+    background-color:#d8d8d8;
+}
+
 }
 .post-item__image {
   display: flex;
   overflow: hidden;
-  transition: transform 0.5s;
   align-content: center;
   justify-content: center;
+  transition: color 0.5s;
+  transition: 0.5s;
   background-color: $color-primary;
-   &:hover{
-    transform: scale(1.1);
-    } 
-    
-   
+    &:hover {
+    background-color:#d8d8d8;
+    transform: scale(1.1)
+ 
+}
 }
 .post-item__caption {
   display: grid;
   align-content: center;
   padding: 20px;
-  transition: color 0.5s;
   text-align: center;
-  &:hover {
-    color: $color-gray-light;
-  }
 }

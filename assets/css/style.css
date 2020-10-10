@@ -992,10 +992,7 @@ a {
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
   background-color: #f2f2f2;
-}
-
-.post-item:hover {
-  background-color: #e5e5e5;
+  overflow: hidden;
 }
 
 .post-item__link {
@@ -1003,6 +1000,13 @@ a {
   overflow: hidden;
   height: 100%;
   grid-template-rows: 300px 1fr;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.post-item__link:hover {
+  background-color: #d8d8d8;
 }
 
 .post-item__image {
@@ -1010,20 +1014,22 @@ a {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   background-color: #2d3651;
 }
 
 .post-item__image:hover {
+  background-color: #d8d8d8;
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -1034,14 +1040,7 @@ a {
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 20px;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
   text-align: center;
-}
-
-.post-item__caption:hover {
-  color: #e5e5e5;
 }
 
 @media (min-width: 576px) {
