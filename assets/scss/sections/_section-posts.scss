@@ -89,12 +89,11 @@
   }
 }
 .post-item__image {
-    display: flex;
-    overflow: hidden;
-    align-content: center;
-    justify-content: center;
-    background-color: #2d3651;
- 
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+  background-color: #2d3651;
 }
 .post-item__image img {
   width: 100%;

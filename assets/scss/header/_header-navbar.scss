@@ -117,7 +117,7 @@
     list-style: none;
 
     font-size: 1.125rem;
-
+    
     @include md-min {
       display: grid;
       justify-content: end;
