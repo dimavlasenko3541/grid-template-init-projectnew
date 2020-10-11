@@ -31,10 +31,13 @@
   }
  
   &__button {
-    display: flex;
+    @include sm-min{
+      display: flex;
     justify-content: center;
 
     padding-top: $gap;
+    }
+   
   }
 }
 

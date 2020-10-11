@@ -43,21 +43,27 @@
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 1.125rem;
+    &::placeholder {
+      color: #637483;
+    }
+
     &:hover,
     &:focus {
       border-color: rgba(255, 255, 255, 0.15);
       border-bottom-color: #ffffff;
       background-color: rgba(255, 255, 255, 0.15);
+      &::placeholder {
+        color:#8493A9;
+      }
     }
   }
   .btn-accent {
     width: 100%;
     color: #ffffff;
+    transition: background-color 0.5s, border-color 0.5s;
     border-color: rgba(255, 255, 255, 0);
     border-bottom-color: rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
-    
-    
     &:hover,
     &:focus {
       cursor: pointer;

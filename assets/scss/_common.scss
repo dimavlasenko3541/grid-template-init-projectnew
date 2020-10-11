@@ -65,7 +65,6 @@ a {
 .btn,
 .btn-accent {
   display: block;
-
   transition: background-color 0.5s;
   text-align: center;
   letter-spacing: 0.1em;
@@ -103,19 +102,21 @@ a {
   }
 }
 
+
 .btn-accent {
-  min-width: 350px;
   height: 60px;
   padding: 18px $gap;
-
   border: 2px solid $color-primary;
   background-color: rgba($color-primary, 0.8);
-
   font-size: 1.125rem;
+
+  @include sm-min{
+    min-width: 350px;
+  }
 
   @include sm {
     width: 100%;
-    min-width: auto;;
+    min-width: auto;
   }
 }
 
