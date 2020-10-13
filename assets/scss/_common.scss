@@ -3,11 +3,12 @@
 }
 
 html {
-  
   color: $color-gray;
-
   font-family: $font-main;
   font-size: $font-size;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -29,35 +30,34 @@ h1 {
 }
 h2 {
   margin-top: 0;
-    letter-spacing: 0.1em;
-    color: #2d3651;
-    font-family: "Roboto Slab", serif;
-    line-height: 1.2em;
-     
-    @include lg-min {
-      margin-bottom: 51px;
-      font-size: 2.5rem;
-     }
-    @include lg-md {
-      margin-bottom: 42px;
-      font-size: 2rem;
-    }
-    @include md-sm {
-      margin-bottom: 36px;
-      font-size: 1.5rem;
-     }
-     @include sm {
-      margin-bottom: 36px;
-      text-align: center;
-      font-size: 1.5rem;
-     }
+  letter-spacing: 0.1em;
+  color: #2d3651;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.2em;
+
+  @include lg-min {
+    margin-bottom: 51px;
+    font-size: 2.5rem;
+  }
+  @include lg-md {
+    margin-bottom: 42px;
+    font-size: 2rem;
+  }
+  @include md-sm {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+  }
+  @include sm {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 }
 a {
   text-decoration: none;
 
   color: $color-light;
 }
-
 
 .btn,
 .btn-accent {
@@ -94,11 +94,10 @@ a {
     min-width: 170px;
     height: 40px;
     padding: 9px $gap;
-
+    margin-top: 20px;
     font-size: 1rem;
   }
 }
-
 
 .btn-accent {
   height: 60px;
@@ -107,7 +106,7 @@ a {
   background-color: rgba($color-primary, 0.8);
   font-size: 1.125rem;
 
-  @include sm-min{
+  @include sm-min {
     min-width: 350px;
   }
 
@@ -116,4 +115,3 @@ a {
     min-width: auto;
   }
 }
-

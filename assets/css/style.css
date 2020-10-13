@@ -479,6 +479,9 @@ html {
   color: #637588;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -684,6 +687,7 @@ a {
 .header-navbar__list {
   margin: 0 -20px 0 0;
   padding: 0;
+  z-index: 2;
   list-style: none;
   font-size: 1.125rem;
 }
@@ -719,18 +723,14 @@ a {
           justify-content: center;
 }
 
-.skills {
-  padding: 10px 10px 40px;
-}
-
 .skills__container {
   display: grid;
+  padding-bottom: 20px;
 }
 
 .skill-item {
   position: relative;
   overflow: hidden;
-  min-height: calc(33.333vh - 13.333px);
   background-color: #2d3651;
 }
 
@@ -875,7 +875,7 @@ a {
 }
 
 .form {
-  padding: 30px 0;
+  padding: 30px 0px 30px 0px;
   background-color: #2d3651;
 }
 
@@ -896,7 +896,7 @@ a {
   display: block;
   width: 100%;
   height: 60px;
-  padding-right: 30px;
+  padding-right: 3px;
   padding-left: 30px;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
@@ -930,29 +930,30 @@ a {
 }
 
 .form-item__input:hover, .form-item__input:focus {
+  outline: none;
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
 }
 
 .form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
-  color: #8493A9;
+  color: #8493a9;
 }
 
 .form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
-  color: #8493A9;
+  color: #8493a9;
 }
 
 .form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
-  color: #8493A9;
+  color: #8493a9;
 }
 
 .form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
-  color: #8493A9;
+  color: #8493a9;
 }
 
 .form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
-  color: #8493A9;
+  color: #8493a9;
 }
 
 .form .btn-accent {
@@ -1040,19 +1041,6 @@ a {
   background-color: #d8d8d8;
 }
 
-.post-item__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2d3651;
-}
-
 .post-item__image img {
   width: 100%;
   -webkit-transition: -webkit-transform 0.5s;
@@ -1069,6 +1057,19 @@ a {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.post-item__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2d3651;
 }
 
 .post-item__caption {
@@ -1141,6 +1142,9 @@ a {
   .header-content__buttons .btn:first-of-type {
     margin-right: 20px;
   }
+  .skills {
+    padding: 10px 10px 40px 10px;
+  }
   .skills__button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1148,7 +1152,6 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 20px;
   }
   .posts__button {
     display: -webkit-box;
@@ -1157,6 +1160,12 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
   }
 }
 
@@ -1271,6 +1280,7 @@ a {
     min-width: 170px;
     height: 40px;
     padding: 9px 20px;
+    margin-top: 20px;
     font-size: 1rem;
   }
   .header-menu {
@@ -1316,19 +1326,27 @@ a {
   .skills__container {
     grid-gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
   .about__container {
     grid-gap: 20px;
     grid-template-columns: 1fr 236px;
   }
   .form__container {
-    grid-gap: 20px;
-    grid-template-columns: 1fr 236px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-item:nth-of-type(1) {
+    grid-column: 1 / span 2;
   }
   .posts__grid {
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 

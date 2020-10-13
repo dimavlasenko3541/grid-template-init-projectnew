@@ -88,13 +88,7 @@
     background-color: #d8d8d8;
   }
 }
-.post-item__image {
-  display: flex;
-  overflow: hidden;
-  align-content: center;
-  justify-content: center;
-  background-color: #2d3651;
-}
+
 .post-item__image img {
   width: 100%;
   transition: transform 0.5s;
@@ -105,6 +99,14 @@
     transform: scale(1.1);
   }
 }
+.post-item__image {
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+  background-color: #2d3651;
+}
+
 .post-item__caption {
   display: grid;
   align-content: center;
