@@ -64,7 +64,12 @@
       }
     }
   }
-  .btn-accent {
+  .btn-accent--active {
+    height: 60px;
+    padding: 18px $gap;
+    border: 2px solid $color-primary;
+    background-color: rgba($color-primary, 0.8);
+    font-size: 1.125rem;
     width: 100%;
     color: #ffffff;
     transition: background-color 0.5s, border-color 0.5s;

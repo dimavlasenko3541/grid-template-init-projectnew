@@ -956,7 +956,12 @@ a {
   color: #8493a9;
 }
 
-.form .btn-accent {
+.form .btn-accent--active {
+  height: 60px;
+  padding: 18px 20px;
+  border: 2px solid #2d3651;
+  background-color: rgba(45, 54, 81, 0.8);
+  font-size: 1.125rem;
   width: 100%;
   color: #ffffff;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
@@ -967,7 +972,7 @@ a {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.form .btn-accent:hover, .form .btn-accent:focus {
+.form .btn-accent--active:hover, .form .btn-accent--active:focus {
   cursor: pointer;
   border-color: #ffffff;
   background-color: #d66926;
