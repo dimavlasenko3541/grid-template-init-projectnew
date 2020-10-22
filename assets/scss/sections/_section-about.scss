@@ -20,7 +20,6 @@
     p {
       @include lg-min {
         font-size: 1.125rem;
-        
       }
     }
   }
@@ -61,6 +60,20 @@
       content: "";
       background-color: #637588;
       opacity: 0.1;
+      @include md-sm {
+        position: absolute;
+        top: 90px;
+        right: -10px;
+        width: 2px;
+        height: 200px;
+        content: "";
+        background-color: #637588;
+        opacity: 0.1;
+      }
     }
   }
+}
+.about__image img {
+  max-width: 100%;
+  max-height: 480px;
 }
