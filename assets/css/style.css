@@ -1269,6 +1269,16 @@ a {
     grid-gap: 40px;
     grid-template-columns: 1fr 271px;
   }
+  .about__text:first-of-type::after {
+    position: absolute;
+    top: 100px;
+    right: -30px;
+    width: 2px;
+    height: 200px;
+    content: "";
+    background-color: #637588;
+    opacity: 0.1;
+  }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
   }
